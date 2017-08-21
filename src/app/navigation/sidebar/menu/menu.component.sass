@@ -1,0 +1,53 @@
+@import '~assets/bootstrap-sass/_variables.scss';
+
+.navbar-collapse.collapse
+    padding: 0;
+.navbar-nav
+    & > li
+        width: 100%;
+        text-align: center;
+        > a
+            color: $default-color;
+    @media (max-width: $screen-sm-min)
+        margin: 0;
+.nav > li
+    > a:hover, > a:focus
+        background: none;
+    &.active
+        background-color: $header-color;
+        border-left: 5px solid;
+        border-color: lighten($header-color, 15%);
+.nav
+    @media (max-width: $screen-sm-min)
+        max-width: 100%;
+    &-message-count
+        z-index: 9999;
+    &-message-oval-rectangle
+        display: inline-flex;
+        position: relative;
+        float: right;
+        height: 20px;
+        background-color: lighten($brand-danger, 5%);
+        &:before, &:after
+            content: '';
+            display: inline-block;
+            position: absolute;
+            background-color: inherit;            
+            height: 20px;
+            width: 15px;
+        &:before
+            left: -10px;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        &:after
+            right: -10px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+.navbar-sidebar-sub
+    text-align: left;
+    list-style: none;
+    list-style-type: none;
+    padding: 5% 0 5% 15%;
+.navbar-collapse.collapse
+    @media (max-width: $screen-sm-min)
+        display: block !important;

@@ -1,0 +1,6 @@
+<div class="sidebar-logo">
+    <span>{{ logo | tlogo:visible }}</span>
+    <div class="sidebar-menu-button hidden-xs hidden-sm" (click)="toggle()">
+        <i class="fa fa-outdent" [ngClass]="{'fa-flip-horizontal':!visible}"></i>
+    </div>
+</div>

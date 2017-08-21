@@ -1,0 +1,12 @@
+<div id="wrapper" [ngClass]="{toggled: switchOn}">
+    <div id="sidebar-wrapper" [ngClass]="{mobileMenu: mobileMenu}">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <app-main-area></app-main-area>
+            </div>
+        </div>
+    </div>
+</div>

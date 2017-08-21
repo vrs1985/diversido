@@ -1,0 +1,55 @@
+<div class="collapse navbar-collapse" id="bs-navbar-collapse">
+    <ul class="nav navbar-nav">
+        <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a routerLink="/order-table">
+                <i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
+                <span *ngIf="visible" (click)="isCollapsed = !isCollapsed">Dashboard 
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </span>
+            </a>
+            <ul class="navbar-sidebar-sub" *ngIf="visible" [collapse]="isCollapsed">
+                <li>
+                    <font color="coral">
+                        <i class="fa fa-circle-o" aria-hidden="true"></i></font>
+                    <a routerLink="">Dashboard 1</a></li>
+                <li>
+                    <font color="lightblue"> <i class="fa fa-circle-o" color-ring="" aria-hidden="true">
+                        </i>
+                    </font>
+                    <a routerLink="">Dashboard 2</a></li>
+                <li>
+                    <font color="BlueViolet">
+                        <i class="fa fa-circle-o" aria-hidden="true"></i></font>
+                    <a routerLink="">Dashboard 3</a></li>
+                <li>
+                    <font color="Chartreuse">
+                        <i class="fa fa-circle-o" aria-hidden="true"></i></font>
+                    <a routerLink="">Comming Soon</a></li>
+            </ul>
+        </li>
+        <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active">
+            <a routerLink="/layouts">
+                <i class="fa fa-television fa-2x" aria-hidden="true"></i>
+                <span *ngIf="visible">
+                    Layouts</span>
+            </a>
+        </li>
+        <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active">
+            <a routerLink="/pages">
+                <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
+                <span *ngIf="visible">
+                    Pages</span>
+            </a>
+        </li>
+        <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active">
+            <a routerLink="/messages">
+                <i class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                <span *ngIf="visible">
+                    Message</span>
+                <span class="nav-message-oval-rectangle">
+                  <span class="nav-message-count">09</span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>

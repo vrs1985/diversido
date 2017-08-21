@@ -1,0 +1,15 @@
+<div class="user-info ">
+    <span class="user-picture">
+        <img src="{{ user.url }}" alt="{{ user.name }}" class="img-circle">
+    </span>
+    <span *ngIf="visible">
+        <span class="user-details">
+            <span class="user-name">
+                {{ user.name }}
+            </span>
+    <span class="user-company">
+                {{ user.company }}
+            </span>
+    </span>
+    </span>
+</div>

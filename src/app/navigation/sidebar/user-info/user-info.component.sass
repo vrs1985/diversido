@@ -1,0 +1,26 @@
+@import '~assets/bootstrap-sass/_variables.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss'
+
+.user
+    &-info
+        display: flex;
+        width: 100%;
+        height: 120px;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-between;
+        @include gradient-vertical($start-color: $header-color, $end-color: darken($brand-danger + $header-color, 25%));
+        img
+            width: 60px;
+            height: 60px;
+    &-picture
+        display: inline-block;
+    &-details
+        display: inline-block;
+        .user
+            &-name
+                font-size: $font-size-h4
+                display: block;
+            &-company
+                font-size: $font-size-h5
+                display: block;

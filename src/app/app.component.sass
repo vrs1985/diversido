@@ -1,0 +1,45 @@
+@import '~assets/bootstrap-sass/_variables.scss';
+
+#wrapper
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-left: 110px;
+    @media (max-width: $screen-sm-min)
+        padding-left: 0;
+    &.toggled
+        padding-left: 250px;
+#sidebar-wrapper
+    z-index: 1000;
+    position: fixed;
+    background-color: $sidebar-color;
+    color: $default-color;
+    left: 250px;
+    width: 110px;
+    min-height: 100%;
+    margin-left: -250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    @media (max-width: $screen-sm-min)
+        display: none;
+        min-height: 100%;
+#wrapper.toggled #sidebar-wrapper
+    width: 250px;
+#page-content-wrapper
+    width: calc(100% - 110px);
+    position: absolute;
+    @media (max-width: $screen-sm-min)
+        width: 100%;    
+#wrapper.toggled #page-content-wrapper
+    transition-delay: .5s;
+    width: calc(100% - 250px);
+    position: absolute;
+    margin-right: -250px;
+.mobileMenu
+    display: block !important;
+    position: absolute !important;
+    width: 250px !important;

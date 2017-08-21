@@ -1,0 +1,11 @@
+<form class="form-inline reporting-area">
+    <div class="form-group">
+        <label class="control-label">
+          Reporting Period
+      </label>
+        <select class="form-control" required="required">
+        <option *ngFor="let value of period" value="{{value}}">{{day(value)}}</option>
+      </select>
+    </div>
+
+</form>

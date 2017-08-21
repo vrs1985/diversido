@@ -1,0 +1,76 @@
+<div class="table-responsive">
+    <table class="table table-recent-order">
+        <thead>
+            <tr>
+                <th colspan="6">Recent Order <span class="caret"></span></th>
+                <th colspan="2">
+                    <div class="order-btn-group">
+                        <div class="order-btn-control">
+                            <i class="fa fa-repeat fa-rotate-90" aria-hidden="true"></i>
+                        </div>
+                        <div class="order-btn-control">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="order-btn-control">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <th>Product name</th>
+                <th>Product code</th>
+                <th>Status</th>
+                <th>Purchased on</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>tracking No#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="https://cdn1.caratlane.com/media/catalog/product/U/E/UE00107-YG0000_1_lar.jpg" alt="" class="img-rounded recent-order-image">
+                </td>
+                <td>
+                    <p>
+                        {{ 'Your product title here' }}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{ '3BSD59' }}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <strong>
+                        {{ 'paid' }}
+                        </strong>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{ '27 Sep 2015' }}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{ '99' | currency:'USD':true }}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{ '2'}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{ '#BG9523LP' }}
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

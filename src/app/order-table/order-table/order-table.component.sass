@@ -1,0 +1,33 @@
+@import '~assets/bootstrap-sass/_variables.scss';
+
+.table-recent-order
+    color: $gray;
+    border: 1px solid;
+    border-color: $table-border-color;
+    thead
+        tr
+            th
+                text-align: center;
+            &:first-child
+                th
+                    border: 1px solid $table-border-color;
+                    &:first-child
+                        text-align: left;
+                        background-color: $gray-lighter;
+                    &:last-child
+                        text-align: right;
+    tbody
+        tr
+            border: none;
+            td
+                text-align: center;
+                vertical-align: middle;
+.recent-order-image
+    max-width: 65px;
+    max-height: 65px;
+.order-btn-control
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+    i:hover
+        color: lighten($gray, 15%);
