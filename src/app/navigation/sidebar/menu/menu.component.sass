@@ -7,6 +7,7 @@
         width: 100%;
         text-align: center;
         > a
+            padding: 20px 0;
             color: $default-color;
     @media (max-width: $screen-sm-min)
         margin: 0;
@@ -25,6 +26,7 @@
     &-message-oval-rectangle
         display: inline-flex;
         position: relative;
+        padding-right: 20px;
         float: right;
         height: 20px;
         background-color: lighten($brand-danger, 5%);
@@ -48,6 +50,8 @@
     list-style: none;
     list-style-type: none;
     padding: 5% 0 5% 15%;
+    > li > a
+        color: $default-color;
 .navbar-collapse.collapse
     @media (max-width: $screen-sm-min)
         display: block !important;

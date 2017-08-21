@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="bs-navbar-collapse">
     <ul class="nav navbar-nav">
         <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <a routerLink="/order-table">
+            <a routerLink="dashboard/home">
                 <i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
                 <span *ngIf="visible" (click)="isCollapsed = !isCollapsed">Dashboard 
                     <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
@@ -28,21 +28,21 @@
             </ul>
         </li>
         <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active">
-            <a routerLink="/layouts">
+            <a routerLink="dashboard/layouts">
                 <i class="fa fa-television fa-2x" aria-hidden="true"></i>
                 <span *ngIf="visible">
                     Layouts</span>
             </a>
         </li>
         <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active">
-            <a routerLink="/pages">
+            <a routerLink="dashboard/pages">
                 <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
                 <span *ngIf="visible">
                     Pages</span>
             </a>
         </li>
         <li [style.textAlign]="visible?'left':'center'" routerLinkActive="active">
-            <a routerLink="/message">
+            <a routerLink="dashboard/message">
                 <i class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
                 <span *ngIf="visible">
                     Message</span>

@@ -9,12 +9,15 @@ import { PushSidebarService } from './push-sidebar.service';
 import { NavigationModule } from './navigation/navigation.module';
 import { MainAreaModule } from './main-area/main-area.module';
 
+import { CHILD_ROUTES } from './navigation/navi-router.module';
+
+import { MainAreaComponent } from './main-area/main-area.component';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 export const appRoutes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-  { path: 'dashboard', component: AppComponent },
+  { path: '', redirectTo: 'dashboard/home', pathMatch: 'full'},
+  { path: 'dashboard',  children: CHILD_ROUTES },
   { path: '**', component: NotFoundComponent }
 ];
 
