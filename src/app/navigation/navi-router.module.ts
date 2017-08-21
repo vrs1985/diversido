@@ -1,5 +1,10 @@
-import { ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { PagesModule } from './../pages/pages.module';
+import { MessageModule } from './../message/message.module';
+import { LayoutsModule } from './../layouts/layouts.module';
+import { OrderTableModule } from './../order-table/order-table.module';
 
 import { OrderTableComponent } from './../order-table/order-table/order-table.component';
 import { MessageComponent } from './../message/message/message.component';
@@ -13,4 +18,16 @@ export const CHILD_ROUTES: Routes = [
   { path: 'layouts', component: LayoutsComponent }
 ];
 
-export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(CHILD_ROUTES);
+@NgModule({
+  imports: [
+    PagesModule,
+    MessageModule,
+    LayoutsModule,
+    OrderTableModule,
+    RouterModule.forChild([...CHILD_ROUTES])
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class NaviRouterModule { }

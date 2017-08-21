@@ -12,13 +12,15 @@ import { CollapseModule } from 'ngx-bootstrap';
 
 import { LogoPipe } from './../logo.pipe';
 
+import { NaviRouterModule } from './navi-router.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AngularFontAwesomeModule,
     RouterModule,
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    NaviRouterModule
   ],
   declarations: [SidebarComponent, UserInfoComponent, MenuComponent, LogoComponent, LogoPipe],
   exports: [ SidebarComponent ]
